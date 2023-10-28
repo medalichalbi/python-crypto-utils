@@ -26,15 +26,5 @@ def verify_signature( message, signature):
         return False 
     
 
-print("\n **********************************************\n")
-message="oussama lassoued"
-signature = sign_message(message)
-print(signature)
-print("\n **********************************************\n")
 
-x="dali chalbi"
-
-print(verify_signature(message,signature))
-print("\n **********************************************\n")
-print(verify_signature(x,signature))
 

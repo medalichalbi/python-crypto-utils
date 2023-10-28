@@ -45,12 +45,4 @@ def encrypt_message_with_certificate(message):
     ciphertext = cipher.encrypt(message.encode("utf-8"))
     return ciphertext
 
-generate_self_signed_certificate()
-
-print("\n **********************************************\n")
-message="oussama lassoued1"
-
-x=encrypt_message_with_certificate(message)
-print (f" {x}\n fin de message encrypt avec certif : ")
-print("\n **********************************************\n")
 

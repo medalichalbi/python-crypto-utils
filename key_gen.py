@@ -14,6 +14,6 @@ def generate_key_pair(key_size=2048):
     with open(public_key_file_path, "wb") as public_key_file:
         public_key_file.write(public_key)
 
-generate_key_pair()
+
 
 
