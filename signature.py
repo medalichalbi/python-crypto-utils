@@ -12,7 +12,7 @@ def sign_message(message):
     signature = pkcs1_15.new(private_key).sign(hash_obj)
     return signature
 
-def verify_signature( message, signature):
+def verify_signature(message, signature):
     public_key_file_path = "public_key.pem"
 
     with open(public_key_file_path, "rb") as public_key_file:
@@ -21,9 +21,9 @@ def verify_signature( message, signature):
     hash_obj = SHA256.new(message.encode("utf-8"))
     try:
         pkcs1_15.new(public_key).verify(hash_obj, signature)
-        return True  
+        print("The signature is valid") 
     except (ValueError, TypeError):
-        return False 
+        print("The signature is invalid") 
     
 
 

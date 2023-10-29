@@ -23,7 +23,7 @@ def email_validation():
         f.write(email)
         return email
       else:
-        print("Please enter a valid email address")
+        print("Please enter a valid email address! Example: username@domain")
 
 def password_validation():
   while True:
@@ -40,10 +40,6 @@ def password_validation():
       print("Password must contain at least an lowercase letter")
       result = False
     if not any(char.isdigit() for char in pwd):
-      #root = tk.Tk()
-      #root.title("WARNING")
-      #messagebox.showinfo(title="WARNING", message="Password must contain at least a number.")
-      #root.mainloop()
       print("Password must contain at least a number")
       result = False   
     if not any(char in special_characters for char in pwd):

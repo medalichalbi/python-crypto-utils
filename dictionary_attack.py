@@ -11,7 +11,7 @@ def attack(word):
         line = line.strip()
         n+=1
         if sha256(line.encode()).hexdigest() == hashed_word:
-            print("Word found!\n")
+            print("\nWord found!\n")
             print(n, "word tested in", (datetime.now() - t).total_seconds(), "seconds")
             f.close()
             return True
