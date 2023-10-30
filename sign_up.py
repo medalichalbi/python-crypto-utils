@@ -23,7 +23,7 @@ def email_validation():
         f.write(email)
         return email
       else:
-        print("Please enter a valid email address! Example: username@domain")
+        print("Please enter a valid email address! Example: username@example.com")
 
 def password_validation():
   while True:

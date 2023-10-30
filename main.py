@@ -20,9 +20,9 @@ def menu():
     
     sys.stdout.write(text2art("\tPyCrypto\n\n"))
 
-    print("\n\n1: Sign up\n")
-    print("2: Log in\n")
-    print("3: Exit\n")
+    print("\n\n1- Create a New Account\n")
+    print("2- Log in\n")
+    print("3- Exit\n")
     choice = input("Enter your choice: ")
 
     match choice:
@@ -31,15 +31,12 @@ def menu():
             sign_up.email_validation()
             sign_up.password_validation()
             os.system("cls")
-            print("Thanks for registering! You can now sign in")
+            print("Thanks for registering! You can now Log in")
             time.sleep(2)
             os.system("cls")
         case "2":
             os.system("cls")
             authentification.authentificate()
-            os.system("cls")
-            print("You are successfully logged in")
-            time.sleep(2)
             os.system("cls")
             main_menu()
         case "3":
@@ -85,7 +82,10 @@ def main_menu():
                 menu_C()
             case "D":
                 os.system("cls")
-                main_menu()
+                print("You have been successfully logged out! See you next time")
+                time.sleep(3)
+                os.system("cls")
+                menu()
             case _:
                 os.system("cls")
                 print("Please enter a valid choice !")
@@ -155,7 +155,7 @@ def menu_B():
                 wait()
             case "c":
                 os.system("cls")
-                decrypted_message = decryption.decrypt_message(message)
+                decrypted_message = decryption.decrypt_message(encrypted_message)
                 os.system("cls")
                 alivebar()
                 print("Here is your decrypted message: ",decrypted_message)
@@ -230,12 +230,10 @@ def wait():
 def alivebar():
     with alive_bar(100) as bar:
         for i in range(100):
-            time.sleep(0.03)
+            time.sleep(0.01)
             bar() 
     os.system("cls")
 
 while True:
     os.system("cls")
-    main_menu()
-
-    
+    menu()
